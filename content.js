@@ -62,6 +62,14 @@ function onProblemsPage() {
 function addAIHelpButton() {
     if (!onProblemsPage() || document.getElementById("ai-help-button")) return;
 
+    // ROBUST SELECTOR: Find the "Ask Doubt" button by text content
+    const allButtons = Array.from(document.querySelectorAll('button'));
+    const askDoubtButton = allButtons.find(btn => 
+        btn.innerText.includes("Ask Doubt") || btn.innerText.includes("Doubt")
+    );
+
+    if (!askDoubtButton) return;
+
     const currentLocalStorage = extractLocalStorage();
     const theme = currentLocalStorage['playlist-page-theme'] || 'dark';
 
@@ -77,26 +85,25 @@ function addAIHelpButton() {
     aiHelpButton.style.height = "40px";
     aiHelpButton.style.width = "40px";
     aiHelpButton.style.cursor = "pointer";
+    aiHelpButton.style.marginLeft = "10px"; // Added spacing
 
-    const askDoubtButton = document.getElementsByClassName("coding_ask_doubt_button__FjwXJ")[0];
-    if (askDoubtButton) {
-        askDoubtButton.parentNode.insertAdjacentElement("afterend", aiHelpButton);
-        aiHelpButton.addEventListener("click", openAIChatBox);
-    }
+    askDoubtButton.parentNode.insertAdjacentElement("afterend", aiHelpButton);
+    aiHelpButton.addEventListener("click", openAIChatBox);
 
     // Initialize problem details
     const problemUrl = window.location.href;
     const problemId = extractUniqueId(problemUrl);
     extractedDetails.id = problemId;
 
-    // Observers for scraping dynamic content
-    const problemNameElement = document.querySelector(".fw-bolder.problem_heading.fs-4");
+    // ROBUST SELECTOR: Get problem title from H1 if class search fails
+    const problemNameElement = document.querySelector(".fw-bolder.problem_heading.fs-4") || document.querySelector('h1');
     if(problemNameElement) {
         observeTextChanges(problemNameElement, (text) => {
             extractedDetails.name = text;
         });
     }
 
+    // Attempt to get description (These classes might still change, but inject.js provides backup data)
     const problemDescriptionElement = document.querySelector(".coding_desc__pltWY.problem_paragraph");
     if (problemDescriptionElement) {
         observeTextChanges(problemDescriptionElement, (text) => {
