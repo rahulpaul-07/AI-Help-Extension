@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "AI Help Extension",
   "version": "0.1",
-  "author": "Varun Somani",
-  "description": "A Chrome Extension that provides AI assistance on maang.in",
+  "author": "Rahul Paul",
+  "description": "An AI-powered assistant for Maang.in that provides hints, code solutions, and problem context using Google Gemini.",
   "permissions": [
     "storage",
     "tabs",
