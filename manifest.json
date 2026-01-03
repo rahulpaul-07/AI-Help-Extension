@@ -1,15 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "Maang.in AI Extension",
-  "version": "0.1",
+  "name": "Maang.in AI Assistant",
+  "version": "1.0",
   "author": "Rahul Paul",
   "description": "An AI-powered assistant for Maang.in that provides hints, code solutions, and problem context using Google Gemini.",
   "permissions": [
     "storage",
-    "tabs",
     "activeTab",
     "scripting",
     "declarativeContent"
+  ],
+  "host_permissions": [
+    "https://maang.in/*",
+    "https://generativelanguage.googleapis.com/*"
   ],
   "content_scripts": [
     {
@@ -17,8 +20,10 @@
         "https://maang.in/*"
       ],
       "js": [
-        "libs/marked.min.js", "content.js"
-      ]
+        "libs/marked.min.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
     }
   ],
   "background": {
@@ -34,7 +39,7 @@
         "assets/ai-help-white.png",
         "inject.js"
       ],
-      "matches": ["<all_urls>"]
+      "matches": ["https://maang.in/*"]
     }
   ],
   "action": {
@@ -44,6 +49,6 @@
       "32": "assets/ext-icon.png"
     },
     "default_popup": "popup.html",
-    "default_title": "AI Help Extension"
+    "default_title": "AI Help Assistant"
   }
 }
