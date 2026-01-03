@@ -1,3 +1,6 @@
+// background.js
+// Author: Rahul Paul
+// Description: Handles background tasks, API calls to Gemini, and manages connection ports
 chrome.runtime.onInstalled.addListener(() => {
   console.log("AI Help Extension installed.");
 
