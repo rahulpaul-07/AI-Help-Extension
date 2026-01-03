@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     status.textContent = 'API key saved successfully!';
                     status.style.color = '#28a745'; // Success Green
                     
-                    // Better UX: Close the popup window automatically after 1.5 seconds
+                    // Close the popup window automatically after 1.5 seconds
                     setTimeout(() => {
                         window.close(); 
                     }, 1500);
