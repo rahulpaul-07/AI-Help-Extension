@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AI Help Extension</title>
+    <title>AI Help Settings</title>
     <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-    <h2>AI Help Extension for maang.in</h2>
-    <!-- <h2>This extension enables you to solve your queries about problems on maang.in</h2> -->
-    <label for="api-key">Enter your API key:</label>
-    <input type="text" id="api-key" placeholder="API Key">
-    <button id="save-key">Save</button>
+    <h3 class="title">Maang.in AI Assistant</h3>
+    
+    <div style="margin-bottom: 15px;">
+        <p style="font-size: 13px; color: #666; line-height: 1.4;">
+            Configure your AI assistant to start solving problems.
+        </p>
+    </div>
+
+    <label for="api-key">Google Gemini API Key:</label>
+    <input type="password" id="api-key" placeholder="Paste your API Key here">
+    
+    <button id="save-key">Save Configuration</button>
+    
     <p id="status"></p>
+
+    <div style="margin-top: 15px; text-align: center; font-size: 12px; border-top: 1px solid #eee; padding-top: 10px;">
+        <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color: #2b384e; text-decoration: none; font-weight: bold;">
+            Get a free API Key &rarr;
+        </a>
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>
