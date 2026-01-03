@@ -1,81 +1,74 @@
-# AI Help Extension
+# Maang.in AI Assistant 🤖
+
+## 🚀 Overview
+**Maang.in AI Assistant** is a powerful Chrome Extension that embeds an intelligent AI tutor directly into the [Maang.in](https://maang.in) competitive programming platform.
+
+Powered by **Google Gemini**, this tool provides real-time, context-aware assistance. Unlike generic chatbots, this extension **automatically reads the problem statement, constraints, and your current code**, offering specific hints and logic explanations without you needing to manually copy-paste the context.
+
+## ✨ Key Features
+* **🧠 Context-Aware AI:** Automatically detects the current problem and feeds the details to the AI for accurate, specific help.
+* **💬 Persistent Chat History:** Saves your conversation for *each specific problem*. You can leave a problem and come back later; your chat will still be there.
+* **🎨 Smart UI:**
+    * **Draggable & Resizable:** Move the chat window anywhere on your screen so it doesn't block your code.
+    * **Theme Adaptation:** Automatically syncs with Maang.in's Dark or Light mode.
+* **⚡ Productivity Tools:**
+    * **One-Click Copy:** Copy code snippets from the AI response instantly.
+    * **Markdown Support:** Responses are formatted beautifully with syntax highlighting.
+    * **Export Chat:** Download your entire study session for offline review.
+
+## 🛠️ Tech Stack
+* **Core:** JavaScript (ES6+), HTML5, CSS3
+* **AI Engine:** Google Gemini API (LLM)
+* **Browser API:** Chrome Manifest V3, Storage API, Shadow DOM
+* **Libraries:** `marked.js` (Markdown parsing)
+
+## ⚙️ Installation Guide
+
+### 1. Clone the Repository
+Open your terminal and run:
+```bash
+git clone [https://github.com/rahulpaul-07/AI-Help-Extension.git](https://github.com/rahulpaul-07/AI-Help-Extension.git)
+
+```
+
+### 2. Load into Chrome
+
+1. Open Google Chrome and type `chrome://extensions/` in the address bar.
+2. Toggle **Developer Mode** (top right corner) to **ON**.
+3. Click the **Load unpacked** button.
+4. Select the folder **`AI-Help-chrome-extension`** (the folder you just cloned).
+
+### 3. Configure API Key
+
+1. Get your free API Key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+2. Go to the [Maang.in](https://maang.in) platform and open any problem.
+3. Click the **AI Assistant Icon** (it appears next to the "Ask Doubt" button).
+4. Paste your API key into the input field and click **Save**.
+* *Note: Your API key is stored locally in your browser for security.*
 
 
-## About
 
-The AI Help Extension is a Chrome extension designed to provide AI assistance on the maang.in platform. It helps users by offering AI-generated responses to their queries related to problems on the platform.
+## 🤝 Contributing
 
+Contributions are welcome! If you want to improve the UI or add support for other platforms:
 
-## Description
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/NewFeature`).
+3. Commit changes (`git commit -m 'Add NewFeature'`).
+4. Push to the branch (`git push origin feature/NewFeature`).
+5. Open a Pull Request.
 
-This extension integrates with the maang.in platform to provide AI assistance. Users can enter their API key to enable the extension, which then allows them to interact with an AI to get help with problems. The extension also includes features like copying text, downloading chat history, and more.
+## 👨‍💻 Author
 
+**Rahul Paul**
 
-## Features
+* [GitHub Profile](https://github.com/rahulpaul-07)
+* [LinkedIn](https://www.linkedin.com/in/rahul-paul-554225251/)
 
-* **AI Assistance** : Provides AI-generated responses to user queries.
-* **API Key Management** : Users can enter and save their API key.
-* **Copy Button** : Allows users to copy text with a single click.
-* **Download Chat History** : Users can download the chat history for offline reference.
-* **Theme Support** : Supports both light and dark themes.
-* **Draggable and resizable Chat Box** : The chat box can be moved around the screen and resized as per the need.
-* **Persistent Chat History** : Saves and loads chat history for each problem.
-* **Problem Context awareness** : The AI already has the problem details, hints, editorial code of the problem for better responses.
+## 📄 License
 
+This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
 
-## How to Run the Project
+```
 
-### Prerequisites
-
-* Google Chrome browser
-* HTML, CSS, JS environment
-
-### Steps
-
-1. **Clone the Repository**
-
-2. **Load the Extension in Chrome**
-
-* Open Chrome and go to [chrome://extensions/].
-* Enable "Developer mode" using the toggle switch in the top right corner.
-* Click on "Load unpacked" and select the directory where you cloned the repository.
-
-3. **Enter Your API Key**
-
-* Click on the extension icon in the Chrome toolbar.
-* Enter your API key in the input field and click "Save".
-
-4. **Using the Extension**
-
-* Navigate to the maang.in platform.
-* The AI help button will appear next to the "Ask Doubt" button when you are on a problems page.
-* Click the AI help button to open the chat box and start interacting with the AI.
-
-## Some Screenshots
-![image](https://github.com/user-attachments/assets/20b8b9b9-9686-446a-8224-24c5ab94985b)
-
-Entering the API key when using the extension for the first time
-
-![image](https://github.com/user-attachments/assets/54136ea0-fccd-4e24-a91b-8e57b9546166)
-
-An initial message displayed for better appeal
-
-![image](https://github.com/user-attachments/assets/b76ee72c-9f55-42c1-83e4-62a71564484e)
-
-Drag anywwhere and resize as per the need
-
-![image](https://github.com/user-attachments/assets/c342645d-1e22-41cf-b1a0-060d30173ddd)
-
-You can also download the conversation for problems
-
-![image](https://github.com/user-attachments/assets/32752212-d68a-4524-ba59-6b59127c2bbf)
-
-Directly copy paste the response/code.
-
-
-## Additional Information
-
-* API Key: The extension requires an API key to fetch AI responses. You can obtain an API key for gemini (the model used for the extension)from: https://aistudio.google.com/app/apikey.
-* Theme Detection: The extension automatically detects the theme (light or dark) of the maang.in platform and adjusts the button and chat box styles accordingly.
-* Error Handling: The extension includes error handling for API calls and other operations to ensure a smooth user experience.
-
+```
