@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "AI Help Extension",
+  "name": "Maang.in AI Extension",
   "version": "0.1",
   "author": "Rahul Paul",
   "description": "An AI-powered assistant for Maang.in that provides hints, code solutions, and problem context using Google Gemini.",
