@@ -27,7 +27,7 @@ Powered by Google Gemini, this tool provides real-time, context-aware assistance
 ### 1. Clone the Repository
 Open your terminal and run:
 ```bash
-git clone git clone https://github.com/rahulpaul-07/AI-Help-Extension.git
+git clone https://github.com/rahulpaul-07/AI-Help-Extension.git
 
 ```
 
