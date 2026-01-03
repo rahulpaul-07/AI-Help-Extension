@@ -7,8 +7,7 @@
   "permissions": [
     "storage",
     "activeTab",
-    "scripting",
-    "declarativeContent"
+    "scripting"
   ],
   "host_permissions": [
     "https://maang.in/*",
@@ -50,5 +49,10 @@
     },
     "default_popup": "popup.html",
     "default_title": "AI Help Assistant"
+  },
+  "icons": {
+    "16": "assets/ext-icon.png",
+    "48": "assets/ext-icon.png",
+    "128": "assets/ext-icon.png"
   }
 }
